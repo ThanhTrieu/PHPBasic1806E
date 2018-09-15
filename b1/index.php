@@ -64,8 +64,52 @@ echo "<br/>";
 $check; // khong bao gio khai bao bien ntn
 $check2 = '';
 $check3 = null;
-if(empty($check)){
+$check4 = false;
+if(empty($check4)){
     echo "Y";
     echo "<br/>";
     //echo gettype($check);
 }
+// kiem tra 1 bien co ton tai hay ko?
+// bien da phai dc khai bao va khong dc gan gang null
+if(isset($check3)){
+    echo "Yes" . PHP_EOL; // PHP_EOL = \n
+} else {
+    echo "No" . PHP_EOL; // PHP_EOL = \n
+}
+echo "<br/>";
+$idNumber = '10101';
+if(is_numeric($idNumber)){
+    echo "OK" . PHP_EOL; // PHP_EOL = \n
+} else {
+    echo "Fail" . PHP_EOL; // PHP_EOL = \n
+}
+echo "<br/>";
+if(is_int($idNumber)){
+    echo "OK - 1" . PHP_EOL; // PHP_EOL = \n
+} else {
+    echo "Not ok - 1" . PHP_EOL; // PHP_EOL = \n
+}
+echo "<br/>";
+
+$num1 = 10;
+$num2 = 100;
+//$num1 = ($num2 < $num1) ? $num2 - $num1: 0;
+// toan tu dieu kien cho tat ca cac phien ban php khac nhau
+//echo $num1;
+// toan tu dieu kien chi chay rieng cho phien banr php7 tro len
+//$num1 = ($num3) ?? 200;
+// ket hop ham isset va toan tu dieu kien
+// $num1 = (isset($num3)) ? $num3 : 200;
+//echo $num1;
+$compare = $num1 <=> $num2;
+echo $compare;
+echo "<br/>";
+
+$test1 = '';
+if($test1 === false){
+    echo "Y";
+} else {
+    echo "N";
+}
+
